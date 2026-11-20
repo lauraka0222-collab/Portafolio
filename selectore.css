@@ -1,0 +1,52 @@
+.selectores {
+  --selector-ink: #263445;
+  --selector-muted: #5d6b7b;
+  --selector-blue: #8e44ad;
+  --selector-blue-soft: #f0e5f5;
+  --selector-line: #d8e0e9;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: clamp(20px, 5vw, 44px);
+  border: 1px solid var(--selector-line);
+  border-radius: 24px;
+  background: #fff;
+  color: var(--selector-ink);
+  font: 1rem/1.7 "Segoe UI", Tahoma, sans-serif;
+}
+.selectores h1, .selectores h2 {
+  color: var(--selector-blue);
+  line-height: 1.2;
+}
+.selectores p { color: var(--selector-muted); }
+.selectores> p {
+  padding: 12px 16px;
+  border-left: 4px solid var(--selector-blue);
+  background: #f7f9fc;
+}
+.selectores .destacado {
+  color: var(--selector-blue);
+  font-weight: 700;
+}
+.selectores #principal {
+  padding: 18px;
+  border: 1px solid var(--selector-line);
+  border-radius: 14px;
+  background: var(--selector-blue-soft);
+}
+.selectores [data-tipo="importante"] {
+  text-decoration: underline;
+  text-decoration-color: #8ca9ca;
+  text-underline-offset: 4px;
+}
+.selectores h2 + p { margin-top: -6px; }
+.selectores li:nth-child(even) { background: #f1f4f8; }
+.selectores a {
+  color: var(--selector-blue);
+  font-weight: 600;
+  text-underline-offset: 4px;
+}
+.selectores a:hover { color: #203d5d; }
+.selectores a:focus-visible {
+  outline: 3px solid #8ca9ca;
+  outline-offset: 4px;
+}

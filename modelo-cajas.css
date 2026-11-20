@@ -1,0 +1,103 @@
+.modelo-cajas {
+  --caja-ink: #263445;
+  --caja-muted: #5d6b7b;
+  --caja-blue: #315b88;
+  --caja-blue-soft: #e4edf7;
+  --caja-line: #d8e0e9;
+
+  max-width: 900px;
+  margin: 40px auto;
+  padding: clamp(20px, 5vw, 44px);
+  border: 1px solid var(--caja-line);
+  border-radius: 24px;
+  background: #fff;
+  color: var(--caja-ink);
+  font: 1rem/1.7 "Segoe UI", Tahoma, sans-serif;
+  box-shadow: 0 16px 40px rgba(38, 52, 69, 0);
+  animation: aparecer-caja 700ms ease-out both;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.modelo-cajas:hover {
+  box-shadow: 0 16px 40px rgba(38, 52, 69, 0.12);
+  transform: translateY(-4px);
+}
+
+.modelo-cajas h1,
+.modelo-cajas h2 {
+  color: var(--caja-blue);
+  line-height: 1.2;
+}
+
+.modelo-cajas p {
+  color: var(--caja-muted);
+}
+
+.modelo-cajas .caja {
+  width: min(100%, 520px);
+  margin: 32px auto;
+  padding: 24px;
+  border: 6px solid #8ca9ca;
+  border-radius: 14px;
+  background: var(--caja-blue-soft);
+  box-sizing: border-box;
+  transition: transform 220ms ease, border-color 220ms ease, background-color 220ms ease;
+}
+
+.modelo-cajas .caja:hover {
+  border-color: var(--caja-blue);
+  background: #eef4fb;
+  transform: scale(1.02);
+}
+
+.modelo-cajas .caja-contenido {
+  min-height: 110px;
+  padding: 18px;
+  border: 2px dashed var(--caja-blue);
+  background: #fff;
+  text-align: center;
+  transition: transform 220ms ease, background-color 220ms ease;
+}
+
+.modelo-cajas .caja:hover .caja-contenido {
+  background: #fafdff;
+  transform: scale(0.98);
+}
+
+.modelo-cajas .caja-contenido p {
+  margin: 0;
+}
+
+.modelo-cajas .explicacion {
+  padding: 12px 16px;
+  border-left: 4px solid var(--caja-blue);
+  background: #f7f9fc;
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.modelo-cajas .explicacion:hover {
+  background: var(--caja-blue-soft);
+  transform: translateX(6px);
+}
+
+@keyframes aparecer-caja {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modelo-cajas,
+  .modelo-cajas .caja,
+  .modelo-cajas .caja-contenido,
+  .modelo-cajas .explicacion {
+    animation: none;
+    transition: none;
+  }
+}
